@@ -1,0 +1,47 @@
+
+.contact-item {
+  padding-bottom: var(--spacing-1);
+}
+.contact-footer {
+  display: flex;
+  justify-content: center;
+  padding-top: var(--spacing-2);
+}
+
+.contact-label-wrapper > .k-input {
+  flex: 1 1 auto;
+}
+.contact-label-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.contact-item > div.k-grid {
+  grid-column-gap: var(--spacing-2);
+  grid-row-gap: var(--spacing-1);
+}
+.contact-toggle {
+  outline: 1px solid var(--input-color-border);
+  justify-content: start;
+  min-height: var(--input-height);
+  box-shadow: var(--input-shadow);
+  border-radius: var(--input-rounded);
+  width: var(--button-width);
+}
+
+.contact-button-group {
+  justify-content: center;
+  border-bottom: 1px solid var(--dropdown-color-hr);
+}
+.contact-button-group > span {
+  position: absolute;
+  transform: translateX(15px);
+}
+.contact-button {
+  width: 100%;
+  justify-content: start;
+}
+.contact-button .k-tag-text {
+  flex: 1 1 100%;
+  text-align: left;
+}
