@@ -13,4 +13,4 @@
 
 use Plain\Helpers\Plugin;
 
-Plugin::load('plain/contact', autoloader: ['config', 'classes', 'snippets']);
+Plugin::load('plain/contact', autoloader: true);
