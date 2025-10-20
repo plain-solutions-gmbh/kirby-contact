@@ -1,9 +1,9 @@
 {
     "name": "plain/kirby-contact",
-    "description": "Field for easy creating contact links",
+    "description": "☝️ Share buttons - ✌️ Field for easy creating contact links",
     "license": "MIT",
     "type": "kirby-plugin",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "authors": [{
         "name": "Roman Gsponer",
         "email": "kirby@plain-solutions.net"

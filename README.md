@@ -116,7 +116,7 @@ You can output share buttons for the current page:
 
 ## Options
 
-All available items are stored in the option `plain.contact.types`. It can be modified by the option property of the field. ([See list of default types](https://raw.githubusercontent.com/plain-solutions-gmbh/kirby-contact/refs/heads/main/autoload/options.php))
+All available types are stored in the option `plain.contact.types`. It can be modified by the option property of the field. ([See list of default types](https://raw.githubusercontent.com/plain-solutions-gmbh/kirby-contact/refs/heads/main/autoload/options.php))
 
 _Example (site/config/config.php):_
 ```php
