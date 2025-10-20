@@ -1,7 +1,11 @@
-# Plain Contact Field Plugin for Kirby CMS
+# Plain Contact Plugin for Kirby CMS
 
 <img src="./.github/screenshot.png" alt="Kirby Contact" width="450" height="auto">
 
+
+You can use this plugin in two ways:
+
+☝️ Create contact buttons and use it on a page.<br />✌️ Let your visitors share a page with their community.
 
 ## Installation
 
@@ -15,12 +19,15 @@
 composer require getplain/kirby-contact
 ```
 
-## Example
+## Contact field
 
 <img src="./.github/example.png" alt="Kirby Contact Items" width="550" height="auto">
 
+
+### Blueprints
+
 ```yaml
-contact_example:
+contact_fields:
   label: Contact
   type: contact
 
@@ -67,15 +74,24 @@ contact_example:
         custom_title: "{title}"
 ```
 
-## Options
 
-All available items are stored in the option `plain.contact.types`. It can be modified by the option property of the field.
+### Output
 
-## Output
+<img src="./.github/frontend_contact.png" alt="Frontend share" width="500" height="auto">
 
-There are two ways to output the contact data.
 
-**1. Output share buttons from page (without a field)**
+```php
+<?= $page->contact_fields()->toContact() ?>
+```
+
+*Parameters:*
+1. Snippet (Default: `contact`)
+2. Optional placeholders
+
+> Snippet are located in `/site/snippets/contact/` *(copy it from `/site/plugins/kirby-contact/snippets/contact/`)*
+
+
+## Share buttons
 
 <img src="./.github/frontend_share.png" alt="Frontend share" width="250" height="auto">
 
@@ -86,26 +102,33 @@ You can output share buttons for the current page:
 ```
 
 *Parameters:*
-1. Filter (array): A list of items
+1. Filter (array): A list of items (required)
 2. Snippet (Default: `share`)
 3. Optional placeholders
-   
-
-> Snippet are located in `/site/snippets/contact/share` *(copy it from `/site/plugins/kirby-contact/snippets/contact/share`)*
-
-**2. Contact buttons (From Field)**
 
 
-<img src="./.github/frontend_contact.png" alt="Frontend share" width="500" height="auto">
+> By default following share buttons are available: sms, whatsapp, facebook, tiktok, linkedin, mastodon.<br />
+> For more share buttons use options (next chapter).
 
 
+> Snippet are located in `/site/snippets/contact/` *(copy it from `/site/plugins/kirby-contact/snippets/contact/`)*
+
+
+## Options
+
+All available items are stored in the option `plain.contact.types`. It can be modified by the option property of the field. ([See list of default types](https://raw.githubusercontent.com/plain-solutions-gmbh/kirby-contact/refs/heads/main/autoload/options.php))
+
+_Example (site/config/config.php):_
 ```php
-<?= $page->->contact_example()->toShare() ?>
+'plain.contact.types' => [
+    'default_type' => [
+        'icon'      => 'box',
+        'label'      => [ 'en' => 'Custom Service' ],
+        'color' => '#5828B8',
+        'output'    => [
+            'contact'   => 'https://example.com/contact/{value}',
+            'share'     => 'https://example.com/share/{url}'
+        ]
+    ]
+];
 ```
-
-*Parameters:*
-1. Snippet (Default: `contact`)
-2. Optional placeholders
-
-
-> Snippet are located in `/site/snippets/contact/contact` *(copy it from `/site/plugins/kirby-contact/snippets/contact/contact`)*
