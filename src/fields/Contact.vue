@@ -10,6 +10,7 @@
       }"
       @sort="save"
     >
+    
       <contact-item
         v-for="(item, index) in items"
         v-bind="$props"

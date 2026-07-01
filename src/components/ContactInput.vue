@@ -34,20 +34,23 @@
         </div>
       </header>
 
-      <div class="k-picklist-input-body">
+      <div class="k-picklist-input-body k-contat">
         <ul
           :style="{ '--columns': 1 }"
           class="k-radio-input k-grid"
           data-variant="choices"
         >
-          <li
+        <k-dragable>
+
+            <li
             v-for="(choice, index) in choices"
             :key="index"
             @click="$emit('input', choice.value)"
-          >
+            >
             <k-tag class="contact-button" v-bind="choice" />
           </li>
-        </ul>
+        </k-dragable>
+      </ul>
 
         <k-button
           v-if="display !== true && filteredOptions.length > display"

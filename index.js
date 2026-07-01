@@ -155,7 +155,7 @@
     _sfc_render$2,
     _sfc_staticRenderFns$2
   );
-  __component__$2.options.__file = "/Users/romangsponer/Cloud/_sites/marketplace/site/plugins/kirby-contact/src/fields/Contact.vue";
+  __component__$2.options.__file = "/Users/romangsponer/Cloud/_kirby/kdev/site/plugins/kirby-contact/src/fields/Contact.vue";
   const ContactField = __component__$2.exports;
   const _sfc_main$1 = {
     props: {
@@ -254,7 +254,7 @@
     _sfc_render$1,
     _sfc_staticRenderFns$1
   );
-  __component__$1.options.__file = "/Users/romangsponer/Cloud/_sites/marketplace/site/plugins/kirby-contact/src/components/ContactItem.vue";
+  __component__$1.options.__file = "/Users/romangsponer/Cloud/_kirby/kdev/site/plugins/kirby-contact/src/components/ContactItem.vue";
   const ContactItem = __component__$1.exports;
   const _sfc_main = {
     extends: "k-picklist-input",
@@ -276,11 +276,11 @@
       if (!$event.type.indexOf("key") && _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")) return null;
       $event.preventDefault();
       return _vm.add.apply(null, arguments);
-    }] } })], 1)]) : _vm._e(), _c("div", { staticClass: "k-picklist-input-body" }, [_c("ul", { staticClass: "k-radio-input k-grid", style: { "--columns": 1 }, attrs: { "data-variant": "choices" } }, _vm._l(_vm.choices, function(choice, index) {
+    }] } })], 1)]) : _vm._e(), _c("div", { staticClass: "k-picklist-input-body k-contat" }, [_c("ul", { staticClass: "k-radio-input k-grid", style: { "--columns": 1 }, attrs: { "data-variant": "choices" } }, [_c("k-dragable", _vm._l(_vm.choices, function(choice, index) {
       return _c("li", { key: index, on: { "click": function($event) {
         return _vm.$emit("input", choice.value);
       } } }, [_c("k-tag", _vm._b({ staticClass: "contact-button" }, "k-tag", choice, false))], 1);
-    }), 0), _vm.display !== true && _vm.filteredOptions.length > _vm.display ? _c("k-button", { staticClass: "k-picklist-input-more", attrs: { "icon": "angle-down" }, on: { "click": function($event) {
+    }), 0)], 1), _vm.display !== true && _vm.filteredOptions.length > _vm.display ? _c("k-button", { staticClass: "k-picklist-input-more", attrs: { "icon": "angle-down" }, on: { "click": function($event) {
       _vm.display = true;
     } } }, [_vm._v(" " + _vm._s(_vm.$t("options.all", { count: _vm.filteredOptions.length })) + " ")]) : _vm._e()], 1)])], 1);
   };
@@ -291,7 +291,7 @@
     _sfc_render,
     _sfc_staticRenderFns
   );
-  __component__.options.__file = "/Users/romangsponer/Cloud/_sites/marketplace/site/plugins/kirby-contact/src/components/ContactInput.vue";
+  __component__.options.__file = "/Users/romangsponer/Cloud/_kirby/kdev/site/plugins/kirby-contact/src/components/ContactInput.vue";
   const ContactInput = __component__.exports;
   window.panel.plugin("plain/contact", {
     fields: {
