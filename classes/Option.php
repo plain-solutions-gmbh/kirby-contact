@@ -7,9 +7,9 @@ namespace Plain\Contact;
  * 
  * @package   Plain Contact
  * @author    Roman Gsponer <kirby@plain-solutions.net>
- * @link      https://plain-solutions.net/
+ * @link      https://github.com/plain-solutions-gmbh/
  * @copyright Roman Gsponer
- * @license   https://plain-solutions.net/license
+ * @license   MIT
  */
 
 use Kirby\Option\Option as KirbyOption;
